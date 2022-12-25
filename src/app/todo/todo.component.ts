@@ -25,6 +25,7 @@ export class TodoComponent implements OnInit {
   }
 
   drop(event: CdkDragDrop<ITask[]>) {
+    if(this.isEditEnable) return ;
     if (event.previousContainer === event.container) {
       moveItemInArray(
         event.container.data,

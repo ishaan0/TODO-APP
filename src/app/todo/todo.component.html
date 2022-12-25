@@ -16,7 +16,7 @@
               color="primary"
               [disabled]="todoForm.invalid"
               (click)="addTask()"
-              class="my-class"
+              class="btn-width"
             >
               Add
             </button>
@@ -26,6 +26,7 @@
               color="primary"
               [disabled]="todoForm.invalid"
               (click)="updateTask()"
+              class="btn-width"
             >
               Update
             </button>
@@ -60,6 +61,7 @@
                       mat-icon-button
                       color="warn"
                       (click)="deleteTask(i)"
+                      [disabled]="isEditEnable"
                     >
                       <mat-icon>delete</mat-icon>
                     </button>
@@ -100,6 +102,7 @@
                     mat-icon-button
                     color="warn"
                     (click)="deleteInProgress(i)"
+                    [disabled]="isEditEnable"
                   >
                     <mat-icon>delete</mat-icon>
                   </button>
@@ -131,6 +134,7 @@
                       mat-icon-button
                       color="warn"
                       (click)="deleteDoneTask(i)"
+                      [disabled]="isEditEnable"
                     >
                       <mat-icon>delete</mat-icon>
                     </button>
